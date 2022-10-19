@@ -28,7 +28,7 @@ function Movie() {
         <div className="col-sm-2 card">
           <div className="card-body">"randomMovie.genreList[0]"</div>
         </div>
-        <div className="blockquote text-right col-sm-6">randomMovie.plot</div>
+        <div className="blockquote text-right col-sm-6">{randomMovie.plot}</div>
       </div>
     </div>
   );

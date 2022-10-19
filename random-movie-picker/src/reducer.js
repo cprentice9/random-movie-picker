@@ -66,6 +66,9 @@ const reducer = (state, action) => {
           image: fake_response.image,
           genre: fake_response.genreList,
           plot: fake_response.plot,
+          //   image: action.image,
+          //   genre: action.genreList,
+          //   plot: action.plot,
         },
       };
 
