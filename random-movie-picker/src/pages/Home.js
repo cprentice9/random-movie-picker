@@ -12,7 +12,7 @@ function Home() {
       <h1 className="movie__title">
         {randomMovie.title} <small>{randomMovie.year}</small>
       </h1>
-      <img className="movie__image" alt="movie__image" src={randomMovie.thumbnail_url} />
+      <img className="movie__image" alt="movie__image" src={randomMovie.image} />
     </div>
   );
 }
