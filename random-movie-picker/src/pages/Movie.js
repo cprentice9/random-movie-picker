@@ -1,13 +1,14 @@
 import React from "react";
 import { useStateValue } from "../StateProvider";
+import "./Movie.css";
 
 function Movie() {
   const [{ randomMovie }, dispatch] = useStateValue();
   return (
     <div className="container col-sm-6">
-      <div className="display-4">
+      <div className="display-4 movie_title">
         <strong>{randomMovie.title}</strong>
-        <small>{randomMovie.year}</small>
+        <small className="movie_year">{randomMovie.year}</small>
       </div>
       <iframe
         width="960"
