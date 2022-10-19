@@ -11,9 +11,9 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/movie" element={[<Header />, <Menu />]} />
+          <Route path="/movie" element={[<Header />, <Menu />, <Movie />]} />
           <Route path="/" element={[<Header />, <Menu />, <Movie />]} />
-          <Route path="/Popular" element={[<Header />, <Menu />]} />
+          <Route path="/popular" element={[<Header />, <Menu />, <Popular />]} />
         </Routes>
       </div>
     </Router>
@@ -21,10 +21,3 @@ function App() {
 }
 
 export default App;
-
-// {/* <div className="App">
-// <Header />
-// <Menu />
-// <Movie />
-// {/* <Popular /> */}
-// </div> */}
