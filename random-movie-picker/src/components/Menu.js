@@ -1,8 +1,15 @@
 import React from "react";
 import "./Menu.css";
 import { useNavigate } from "react-router-dom";
+import { useStateValue } from "../StateProvider";
 
 function Menu() {
+  const [{ randomMovie }, dispatch] = useStateValue();
+  const getRandomMovie = () => {
+    dispatch({
+      type: "GET_RANDOM_MOVIE",
+    });
+  };
   const navigate = useNavigate();
 
   const navigateToHome = () => {
@@ -24,7 +31,9 @@ function Menu() {
         </h1>
       </div>
       <div>
-        <button className="movie__button">PICK A RANDOM MOVIE</button>
+        <button onClick={getRandomMovie} className="movie__button">
+          PICK A RANDOM MOVIE
+        </button>
       </div>
     </div>
   );
