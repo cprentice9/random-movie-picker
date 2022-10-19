@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Menu from "./components/Menu";
 import Home from "./pages/Home";
+import Movie from "./pages/Movie";
 import Popular from "./pages/Popular";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import axios from "axios";
@@ -39,6 +40,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/popular" element={[<Header />, <Menu />, <Popular />]} />
+          <Route path="/movie" element={[<Header />, <Menu />, <Movie />]} />
           <Route path="/" element={[<Header />, <Menu />, <Home />]} />
         </Routes>
       </div>
