@@ -1,0 +1,10 @@
+.movie__title {
+  display: flex;
+  margin-left: 100px;
+}
+
+.movie__image {
+  display: flex;
+  width: 1000px;
+  margin-left: 100px;
+}

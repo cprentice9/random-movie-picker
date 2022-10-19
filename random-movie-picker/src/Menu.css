@@ -14,8 +14,8 @@
 }
 
 .movie__button {
-  display: inline-block;
-  margin-right: 450px;
+  display: flex;
+  margin-left: 100px;
   margin-top: 15px;
   background-color: #00b2ff;
   border: none;
