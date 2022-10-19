@@ -1,8 +1,8 @@
 - [ ] style the movie page
-- [ ] style the home page
+- [x] style the home page
 - [ ] style the popular page
-- [ ] style the header component
-- [ ] style the menu component
+- [x] style the header component
+- [x] style the menu component
 - [ ] fix and/or verify genreList(see list items on popular)
 - [ ] update axios request to include trailer on getMovieDetails
 - [x] update axios request to include plot on getMovieDetails

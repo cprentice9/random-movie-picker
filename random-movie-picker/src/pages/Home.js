@@ -15,7 +15,7 @@ function Home() {
   return (
     <div>
       <h1 className="movie__title">
-        {randomMovie.title} <small>{randomMovie.year}</small>
+        {randomMovie.title} <small className="movie__year">{randomMovie.year}</small>
       </h1>
       <img onClick={navigateToMovie} className="movie__image" alt="movie__image" src={randomMovie.image} />
     </div>
