@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <Header />
       <Menu />
-      {/* <Random /> */}
+      <Random />
       {/* <Popular /> */}
     </div>
   );
