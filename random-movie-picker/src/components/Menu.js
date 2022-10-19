@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom";
 function Menu() {
   const navigate = useNavigate();
 
-  const navigateToMovie = () => {
-    navigate("/movie");
+  const navigateToHome = () => {
+    navigate("/");
   };
 
   const navigateToPopular = () => {
@@ -16,7 +16,7 @@ function Menu() {
   return (
     <div className="menu">
       <div className="menu__text">
-        <h1 onClick={navigateToMovie} className="random">
+        <h1 onClick={navigateToHome} className="random">
           Random
         </h1>
         <h1 onClick={navigateToPopular} className="most__popular">

@@ -1,7 +1,7 @@
 import React from "react";
-import "./Movie.css";
+import "./Home.css";
 
-function Movie() {
+function Home() {
   return (
     <div>
       <h1 className="movie__title">Movie Title</h1>
@@ -13,4 +13,4 @@ function Movie() {
   );
 }
 
-export default Movie;
+export default Home;
