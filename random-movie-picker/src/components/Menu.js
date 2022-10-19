@@ -50,10 +50,13 @@ function Menu() {
   return (
     <div className="menu">
       <div className="menu__text">
-        <h1 onClick={navigateToHome} className="random">
+        <h1 onClick={navigateToHome} className={`random ${window.location.pathname === "/" ? "active" : ""}`}>
           Random
         </h1>
-        <h1 onClick={navigateToPopular} className="most__popular">
+        <h1
+          onClick={navigateToPopular}
+          className={`most_popular ${window.location.pathname === "/popular" ? "active" : ""}`}
+        >
           Most Popular
         </h1>
       </div>
