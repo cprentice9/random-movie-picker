@@ -1,0 +1,27 @@
+.menu__text {
+  display: flex;
+  font-size: small;
+}
+
+.random {
+  margin-left: 40px;
+  font-weight: 500;
+}
+
+.most__popular {
+  margin-left: 40px;
+  font-weight: 500;
+}
+
+.movie__button {
+  display: inline-block;
+  margin-right: 450px;
+  margin-top: 15px;
+  background-color: #00b2ff;
+  border: none;
+  padding: 10px 40px;
+  color: white;
+  font-size: 14px;
+  font-weight: 550;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 150px 0 rgba(0, 0, 0, 0.19);
+}

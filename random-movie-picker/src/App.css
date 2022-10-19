@@ -1,3 +1,9 @@
+.home__title {
+  color: #61dafb;
+  display: flex;
+  margin-left: 40px;
+}
+
 .App {
   text-align: center;
 }
