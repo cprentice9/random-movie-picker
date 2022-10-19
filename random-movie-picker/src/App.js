@@ -12,7 +12,6 @@ function App() {
   const [{ loading }, dispatch] = useStateValue();
   useEffect(() => {
     const updateMovie = (movies) => {
-      console.log("updating movies");
       dispatch({
         type: "UPDATE_MOVIES",
         movies,
@@ -30,7 +29,6 @@ function App() {
         url: `https://imdb-api.com/en/API/MostPopularMovies/k_v11zhqeg`,
       });
       updateMovie(response.data.items);
-      console.log("testing", response);
     };
 
     // getClientSecret();
