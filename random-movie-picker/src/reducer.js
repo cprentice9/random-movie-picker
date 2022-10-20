@@ -8,6 +8,8 @@ export const initialState = {
       year: "2022",
       title: "Halloween Ends",
       full_title: "Halloween Ends Full Title",
+      rating: 10,
+      rank: 1,
     },
     {
       gross: "$40.1M",
@@ -17,6 +19,8 @@ export const initialState = {
       year: "2022",
       title: "Anything else",
       full_title: "Anything else Full Title",
+      rating: 10,
+      rank: 2,
     },
   ],
   user: null,

@@ -49,26 +49,39 @@ function Menu() {
     navigate("/popular");
   };
 
-  return (
-    <div className="menu">
-      <div className="menu__text">
-        <h1 onClick={navigateToHome} className={`random ${window.location.pathname === "/" ? "active" : ""}`}>
-          Random
-        </h1>
-        <h1
-          onClick={navigateToPopular}
-          className={`most_popular ${window.location.pathname === "/popular" ? "active" : ""}`}
-        >
-          Most Popular
-        </h1>
+  if (window.location.pathname === "/movie") {
+    return (
+      <div className="row justify-content-start align-content-center display-6">
+        <a href="/" id="back-btn" className="bolder col-sm-2 col-offset-0">
+          <span id="back-char-code">&#8249;</span>
+          <span id="back-text">BACK</span>
+        </a>
       </div>
-      <div>
-        <button onClick={getRandomMovie} className="movie__button">
-          PICK A RANDOM MOVIE
-        </button>
+    );
+  } else {
+    return (
+      <div className="menu">
+        <div className="menu__text">
+          <h1 onClick={navigateToHome} className={`random ${window.location.pathname === "/" ? "active" : ""}`}>
+            Random
+          </h1>
+          <h1
+            onClick={navigateToPopular}
+            className={`most_popular ${window.location.pathname === "/popular" ? "active" : ""}`}
+          >
+            Most Popular
+          </h1>
+        </div>
+        <div>
+          {window.location.pathname !== "/popular" && (
+            <button onClick={getRandomMovie} className="movie__button">
+              PICK A RANDOM MOVIE
+            </button>
+          )}
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default Menu;

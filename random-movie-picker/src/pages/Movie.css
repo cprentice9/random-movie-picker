@@ -5,3 +5,19 @@
 .movie_year {
   margin-left: 30px;
 }
+
+.genre-card {
+  padding: 8px;
+  margin: 16px;
+  border: 1px solid black;
+  font-weight: 500;
+  min-width: 85px !important;
+  width: 10% !important;
+  border-radius: 4px;
+}
+
+.movie-description {
+  text-align: left;
+  font-size: 18px;
+  font-weight: 500;
+}

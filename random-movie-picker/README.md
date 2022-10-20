@@ -1,6 +1,6 @@
-- [ ] style the movie page
+- [x] style the movie page
 - [x] style the home page
-- [ ] style the popular page
+- [x] style the popular page
 - [x] style the header component
 - [x] style the menu component
 - [x] fix and/or verify genreList(see list items on popular)

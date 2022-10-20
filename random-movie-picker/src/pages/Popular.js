@@ -7,43 +7,37 @@ function Popular() {
   const listItems = movies.map((movie) => {
     return (
       <tr className="row">
-        <td className="col-sm-3">
+        <td className="col-sm-3 thumbnail">
           <img src={movie.image} className="img-thumbnail" />
         </td>
-        <td className="card col-sm-3">
-          <div className="card-body">
-            <h5 className="card-title">{movie.title}</h5>
-            <p className="card-text">{movie.year}</p>
+        <td className="table-card col-sm-3">
+          <div className="table-column">
+            <h5 className="title col-sm-12">{movie.title}</h5>
+            <p className="sub-title col-sm-12">{movie.year}</p>
           </div>
         </td>
-        <td className="card col-sm-3">
-          <div className="card-body">
-            <h5 className="card-title">IMDb RATING</h5>
-            <p className="card-text">{movie.rating}</p>
+        <td className="card-sm col-sm-3">
+          <div className="table-column">
+            <h5 className="title col-sm-12">IMDb RATING</h5>
+            <p className="sub-title col-sm-12">
+              <span>⭐</span>
+              {movie.rating}/10
+            </p>
           </div>
         </td>
-        <td className="card col-sm-3">
-          <div className="card-body">
-            <h5 className="card-title">RANK</h5>
-            <p className="card-text">{movie.rank}</p>
+        <td className="card-sm col-sm-3">
+          <div className="table-column">
+            <h5 className="title col-sm-12">RANK</h5>
+            <p className="sub-title col-sm-12">{movie.rank}</p>
           </div>
         </td>
       </tr>
     );
   });
-  console.log(movies);
   return (
     <div>
-      <table className="table">
-        <thead>
-          <tr>
-            <td>Thumbnail</td>
-            <td>Title</td>
-            <td>Rating</td>
-            <td>Rank</td>
-          </tr>
-        </thead>
-        <tbody>{listItems}</tbody>
+      <table className="table row pt-5">
+        <tbody className="col-sm-10 offset-sm-1">{listItems}</tbody>
       </table>
     </div>
   );
