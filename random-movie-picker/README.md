@@ -3,10 +3,10 @@
 - [ ] style the popular page
 - [x] style the header component
 - [x] style the menu component
-- [ ] fix and/or verify genreList(see list items on popular)
-- [ ] update axios request to include trailer on getMovieDetails
+- [x] fix and/or verify genreList(see list items on popular)
+- [x] update axios request to include trailer on getMovieDetails
 - [x] update axios request to include plot on getMovieDetails
-- [ ] render movie trailer in iframe on movie page
+- [x] render movie trailer in iframe on movie page
 - [ ] host site
 - [ ] ?BUG? - undefined movie in initial state
 - [ ] uncomment all axios requests

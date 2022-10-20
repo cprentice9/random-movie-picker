@@ -58,16 +58,18 @@ const reducer = (state, action) => {
           },
         ],
         plot: "The saga of Michael Myers and Laurie Strode comes to a spine-chilling climax in this final installment of this trilogy.",
+        trailerData: "https://www.youtube.com/embed/ek1ePFp-nBI",
       };
       return {
         ...state,
         randomMovie: {
           ...state.randomMovie,
           image: fake_response.image,
-          genre: fake_response.genreList,
+          genreList: fake_response.genreList,
           plot: fake_response.plot,
+          trailerData: fake_response.trailerData,
           //   image: action.image,
-          //   genre: action.genreList,
+          //   genreList: action.genreList,
           //   plot: action.plot,
         },
       };

@@ -19,12 +19,14 @@ function Menu() {
         image: movie.image,
         genreList: movie.genreList,
         plot: movie.plot,
+        trailerData: movie.trailerData,
       });
       dispatch({
         type: "SET_MOVIE_DETAILS",
         image: movie.image,
         genreList: movie.genreList,
         plot: movie.plot,
+        trailerData: movie.trailerData,
       });
     };
 
