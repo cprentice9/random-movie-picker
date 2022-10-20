@@ -8,8 +8,8 @@
 - [x] update axios request to include plot on getMovieDetails
 - [x] render movie trailer in iframe on movie page
 - [ ] host site
-- [ ] ?BUG? - undefined movie in initial state
-- [ ] uncomment all axios requests
-- [ ] ?? on Movie.js redirect back if no movie present
-- [ ] ?? loading state / loading indicator
-- [ ] ?? automatically begin fetching movie details for initially displayed movie
+- [x] ?BUG? - undefined movie in initial state
+- [x] uncomment all axios requests
+- [x] ?? on Movie.js redirect back if no movie present
+- [x] ?? loading state / loading indicator
+- [x] ?? automatically begin fetching movie details for initially displayed movie

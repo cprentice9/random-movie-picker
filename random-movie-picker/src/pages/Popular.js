@@ -21,7 +21,7 @@ function Popular() {
             <h5 className="title col-sm-12">IMDb RATING</h5>
             <p className="sub-title col-sm-12">
               <span>⭐</span>
-              {movie.rating}/10
+              {movie.imDbRating}/10
             </p>
           </div>
         </td>

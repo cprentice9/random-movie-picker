@@ -10,29 +10,38 @@ import axios from "axios";
 import { useStateValue } from "./StateProvider";
 
 function App() {
-  const [{ loading }, dispatch] = useStateValue();
+  const [{ loading, randomMovie, movies }, dispatch] = useStateValue();
   useEffect(() => {
-    const updateMovie = (movies) => {
+    const updateMovies = (movies) => {
       dispatch({
         type: "UPDATE_MOVIES",
         movies,
       });
     };
-    const toggleLoading = () => {
+
+    const updateMovie = (movie) => {
       dispatch({
-        type: "WILL_UPDATE_MOVIES",
+        type: "SET_MOVIE_DETAILS",
+        movie,
       });
-    };
-    const getClientSecret = async () => {
-      toggleLoading();
-      const response = await axios({
-        method: "get",
-        url: `https://imdb-api.com/en/API/MostPopularMovies/k_v11zhqeg`,
-      });
-      updateMovie(response.data.items);
     };
 
-    // getClientSecret();
+    const fetchMovieList = async () => {
+      if (movies.length < 3) {
+        const movies = await axios({
+          method: "get",
+          url: `https://imdb-api.com/en/API/MostPopularMovies/k_v11zhqeg`,
+        });
+        updateMovies(movies.data.items);
+        const movie = await axios({
+          method: "get",
+          url: `https://imdb-api.com/en/API/Title/k_v11zhqeg/${movies.data.items[0].id}`,
+        });
+        updateMovie(movie.data);
+      }
+    };
+
+    fetchMovieList();
   }, []);
 
   return (

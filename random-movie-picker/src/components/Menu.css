@@ -34,12 +34,14 @@
   margin-left: 40px;
   font-weight: 500;
   font-size: 30px;
+  cursor: pointer;
 }
 
 .most_popular {
   margin-left: 40px;
   font-weight: 500;
   font-size: 30px;
+  cursor: pointer;
 }
 
 .movie__button {

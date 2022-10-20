@@ -17,7 +17,11 @@ function Home() {
       <h1 className="movie__title">
         {randomMovie.title} <small className="movie__year">{randomMovie.year}</small>
       </h1>
-      <img onClick={navigateToMovie} className="movie__image" alt="movie__image" src={randomMovie.image} />
+      {randomMovie.genreList ? (
+        <img onClick={navigateToMovie} className="movie__image" alt="movie__image" src={randomMovie.image} />
+      ) : (
+        <div class="loader"></div>
+      )}
     </div>
   );
 }

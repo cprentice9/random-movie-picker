@@ -5,40 +5,24 @@ import { useStateValue } from "../StateProvider";
 import axios from "axios";
 
 function Menu() {
-  const [{ randomMovie }, dispatch] = useStateValue();
-  useEffect(() => {
-    // getClientSecret();
-  }, []);
-  const getRandomMovie = async () => {
+  const [{ randomMovie, movies }, dispatch] = useStateValue();
+  const updateMovie = (movie) => {
     dispatch({
-      type: "GET_RANDOM_MOVIE",
+      type: "SET_MOVIE_DETAILS",
+      movie,
     });
-    const updateMovie = (movie) => {
-      console.log({
-        type: "SET_MOVIE_DETAILS",
-        image: movie.image,
-        genreList: movie.genreList,
-        plot: movie.plot,
-        trailerData: movie.trailerData,
-      });
-      dispatch({
-        type: "SET_MOVIE_DETAILS",
-        image: movie.image,
-        genreList: movie.genreList,
-        plot: movie.plot,
-        trailerData: movie.trailerData,
-      });
-    };
-
-    if (randomMovie) {
-      // const response = await axios({
-      //   method: "get",
-      //   url: `https://imdb-api.com/en/API/Title/k_v11zhqeg/${randomMovie.id}`,
-      // });
-      // updateMovie(response.data);
-      updateMovie({});
-    }
   };
+  const getRandomMovie = async () => {
+    const randomIndex = Math.floor(Math.random() * movies.length);
+    let randomMovie = movies[randomIndex];
+
+    const movie = await axios({
+      method: "get",
+      url: `https://imdb-api.com/en/API/Title/k_v11zhqeg/${randomMovie.id}`,
+    });
+    updateMovie(movie.data);
+  };
+
   const navigate = useNavigate();
 
   const navigateToHome = () => {
